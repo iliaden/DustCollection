@@ -3,6 +3,7 @@
 #include "sensor.h"
 #include "constants.h"
 #include "gateController.h"
+#include "routingMap.h"
 #include <Servo.h>
 
 Display display;
@@ -19,6 +20,7 @@ void setup() {
   Serial.begin(9600);
   myservo.attach(9);
   myservo.write(90);
+  setRoutes();
 }
 
 void runCallibration(int servoNum){
